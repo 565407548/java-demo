@@ -1,4 +1,7 @@
 # this project is demo in Java
+## document
++ mysql: 初始化数据库数据
+
 ## mybatis generator demo
 执行 com.zhengcj.demo.mybatis.generator.Generator.main()，就可以生成：
 + com.zhengcj.demo.mybatis.mapper (in src/main/java/)
