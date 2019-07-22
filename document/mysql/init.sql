@@ -4,8 +4,8 @@ USE demo;
 drop table if exists user;
 CREATE TABLE IF NOT EXISTS user
 (
-  id       INT PRIMARY KEY AUTO_INCREMENT,
-  name     VARCHAR(100) NOT NULL,
+  id       INT PRIMARY KEY,
+  name     VARCHAR(100) NOT NULL ,
   password VARCHAR(100) NOT NULL,
   gender   INT          NOT NULL,
   role_id  INT          NOT NULL

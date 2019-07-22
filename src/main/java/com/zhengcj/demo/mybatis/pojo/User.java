@@ -1,15 +1,40 @@
 package com.zhengcj.demo.mybatis.pojo;
 
-public class User {
+import io.swagger.annotations.ApiModelProperty;
+import java.io.Serializable;
+
+public class User implements Serializable {
+    /**
+     * user id
+     */
+    @ApiModelProperty(value = "user id")
     private Integer id;
 
+    /**
+     * user name
+     */
+    @ApiModelProperty(value = "user name")
     private String name;
 
+    /**
+     * user password
+     */
+    @ApiModelProperty(value = "user password")
     private String password;
 
+    /**
+     * user gender, 0: male, 1:female
+     */
+    @ApiModelProperty(value = "user gender, 0: male, 1:female")
     private Integer gender;
 
+    /**
+     * user role id
+     */
+    @ApiModelProperty(value = "user role id")
     private Integer roleId;
+
+    private static final long serialVersionUID = 1L;
 
     public Integer getId() {
         return id;
@@ -49,5 +74,21 @@ public class User {
 
     public void setRoleId(Integer roleId) {
         this.roleId = roleId;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(getClass().getSimpleName());
+        sb.append(" [");
+        sb.append("Hash = ").append(hashCode());
+        sb.append(", id=").append(id);
+        sb.append(", name=").append(name);
+        sb.append(", password=").append(password);
+        sb.append(", gender=").append(gender);
+        sb.append(", roleId=").append(roleId);
+        sb.append(", serialVersionUID=").append(serialVersionUID);
+        sb.append("]");
+        return sb.toString();
     }
 }
