@@ -1,13 +1,13 @@
-package com.zhengcj.demo;
+package com.zhengcj.demo.mybatis;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DemoApplication {
+public class MybatisApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(DemoApplication.class, args);
+        SpringApplication.run(MybatisApplication.class, args);
     }
 
 }
