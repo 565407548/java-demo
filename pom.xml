@@ -8,11 +8,17 @@
         <version>2.1.6.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.zhengcj</groupId>
-    <artifactId>mybatis</artifactId>
+    <groupId>com.zhengcj.demo</groupId>
+    <artifactId>java-demo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>mybatis</name>
-    <description>Mybatis Demo project for Spring Boot</description>
+    <name>java-demo</name>
+    <description>Java Demo project for Spring Boot</description>
+
+    <modules>
+        <module>data</module>
+        <module>mybatis</module>
+        <module>swagger</module>
+    </modules>
 
     <properties>
         <java.version>1.8</java.version>
@@ -21,10 +27,6 @@
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>
             <artifactId>mybatis-spring-boot-starter</artifactId>
@@ -91,31 +93,6 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-
-            <plugin>
-                <groupId>org.mybatis.generator</groupId>
-                <artifactId>mybatis-generator-maven-plugin</artifactId>
-                <version>1.3.7</version>
-
-                <configuration>
-                    <configurationFile>mybatis/src/main/resources/generator/generator.xml</configurationFile>
-                    <overwrite>true</overwrite>
-                    <verbose>true</verbose>
-                </configuration>
-
-                <dependencies>
-                    <dependency>
-                        <groupId>org.mybatis.generator</groupId>
-                        <artifactId>mybatis-generator-core</artifactId>
-                        <version>${mybatis.generator.core.version}</version>
-                    </dependency>
-                    <dependency>
-                        <groupId>mysql</groupId>
-                        <artifactId>mysql-connector-java</artifactId>
-                        <version>8.0.16</version>
-                    </dependency>
-                </dependencies>
             </plugin>
         </plugins>
     </build>
