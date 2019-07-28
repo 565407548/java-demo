@@ -16,7 +16,7 @@ import java.util.List;
 public class Generator {
     public static void main(String[] args) {
         // 执行中的异常信息会保存在warnings中
-        List<String> warnings = new ArrayList<>();
+        List<String> warnings = new ArrayList<String>();
         try {
             // true:生成的文件覆盖之前的
             final boolean overwrite = true;

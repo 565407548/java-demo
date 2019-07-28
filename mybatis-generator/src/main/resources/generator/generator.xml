@@ -46,6 +46,7 @@
         <!-- 生成映射文件的包名和位置-->
         <sqlMapGenerator targetPackage="${sqlPackage}" targetProject="${sqlProject}">
             <property name="enableSubPackages" value="true"/>
+            <property name="overWrite" value="true"/>
         </sqlMapGenerator>
 
         <!-- 生成DAO的包名和位置 -->
