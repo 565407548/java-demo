@@ -1,8 +1,8 @@
 package com.zhengcj.demo.swagger.service.impl;
 
-import com.zhengcj.demo.data.mapper.UserMapper;
-import com.zhengcj.demo.data.pojo.User;
-import com.zhengcj.demo.data.pojo.UserExample;
+import com.zhengcj.demo.mybatis.mapper.UserMapper;
+import com.zhengcj.demo.mybatis.pojo.User;
+import com.zhengcj.demo.mybatis.pojo.UserExample;
 import com.zhengcj.demo.swagger.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -1,7 +1,7 @@
-package com.zhengcj.demo.data.mapper;
+package com.zhengcj.demo.mybatis.mapper;
 
-import com.zhengcj.demo.data.pojo.User;
-import com.zhengcj.demo.data.pojo.UserExample;
+import com.zhengcj.demo.mybatis.pojo.User;
+import com.zhengcj.demo.mybatis.pojo.UserExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
 

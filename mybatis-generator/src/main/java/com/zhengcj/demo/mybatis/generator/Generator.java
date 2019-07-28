@@ -23,7 +23,7 @@ public class Generator {
             // 读取配置,构造 Configuration 对象.
             // 如果不想使用配置文件的话,也可以直接来 new Configuration(),然后给相应属性赋值.
             System.out.println(new File("tmp").getAbsolutePath());
-            File configFile = new File("./mybatis/src/main/resources/generator/generator.xml");
+            File configFile = new File("./mybatis-generator/src/main/resources/generator/generator.xml");
             ConfigurationParser cp = new ConfigurationParser(warnings);
             Configuration config = cp.parseConfiguration(configFile);
             DefaultShellCallback callback = new DefaultShellCallback(overwrite);

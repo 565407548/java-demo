@@ -1,6 +1,6 @@
 package com.zhengcj.demo.swagger.service;
 
-import com.zhengcj.demo.data.pojo.User;
+import com.zhengcj.demo.mybatis.pojo.User;
 
 import java.util.List;
 

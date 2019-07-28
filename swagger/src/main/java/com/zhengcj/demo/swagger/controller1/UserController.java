@@ -1,6 +1,6 @@
 package com.zhengcj.demo.swagger.controller1;
 
-import com.zhengcj.demo.data.pojo.User;
+import com.zhengcj.demo.mybatis.pojo.User;
 import com.zhengcj.demo.swagger.pojo.LoginRequest;
 import com.zhengcj.demo.swagger.service.UserService;
 import io.swagger.annotations.Api;

@@ -12,4 +12,20 @@ public class LoginRequest {
     @Length(min=2,message = "min length of password is 2")
     @ApiModelProperty(notes = "user's password",example = "123")
     private String password;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 }

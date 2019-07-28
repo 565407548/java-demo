@@ -7,11 +7,10 @@
         <artifactId>java-demo</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <groupId>com.zhengcj.demo</groupId>
-    <artifactId>mybatis</artifactId>
+    <artifactId>mybatis-generator</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>mybatis</name>
-    <description>Mybatis Demo project for Spring Boot</description>
+    <name>mybatis-generator</name>
+    <description>Mybatis Generator Demo project for Spring Boot</description>
 
     <dependencies>
         <dependency>

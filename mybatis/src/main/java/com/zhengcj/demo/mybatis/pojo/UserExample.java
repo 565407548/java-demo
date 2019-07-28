@@ -1,4 +1,4 @@
-package com.zhengcj.demo.data.pojo;
+package com.zhengcj.demo.mybatis.pojo;
 
 import java.util.ArrayList;
 import java.util.List;

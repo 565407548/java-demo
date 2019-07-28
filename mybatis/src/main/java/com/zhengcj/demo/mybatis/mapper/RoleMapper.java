@@ -1,6 +1,6 @@
-package com.zhengcj.demo.data.mapper;
+package com.zhengcj.demo.mybatis.mapper;
 
-import com.zhengcj.demo.data.pojo.Role;
+import com.zhengcj.demo.mybatis.pojo.Role;
 
 public interface RoleMapper {
     int deleteByPrimaryKey(Integer id);

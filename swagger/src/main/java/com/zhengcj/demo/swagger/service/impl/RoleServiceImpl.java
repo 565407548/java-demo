@@ -1,7 +1,7 @@
 package com.zhengcj.demo.swagger.service.impl;
 
-import com.zhengcj.demo.data.mapper.RoleMapper;
-import com.zhengcj.demo.data.pojo.Role;
+import com.zhengcj.demo.mybatis.mapper.RoleMapper;
+import com.zhengcj.demo.mybatis.pojo.Role;
 import com.zhengcj.demo.swagger.service.RoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
