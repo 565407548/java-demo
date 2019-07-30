@@ -14,7 +14,6 @@ public class UserServiceImpl implements UserService {
     @Autowired
     UserMapper userMapper;
 
-
     @Override
     public User getUserById(Integer userId) {
         User user = userMapper.selectByPrimaryKey(userId);

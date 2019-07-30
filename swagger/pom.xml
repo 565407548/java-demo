@@ -21,6 +21,8 @@
         <java.version>1.8</java.version>
         <mybatis.generator.core.version>1.3.7</mybatis.generator.core.version>
         <swagger.version>2.9.2</swagger.version>
+        <docker.image.prefix>zhengcj01</docker.image.prefix>
+        <dockerfile-maven-version>1.4.10</dockerfile-maven-version>
     </properties>
 
     <dependencies>
@@ -92,36 +94,41 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
-
+            <!-- tag::plugin[] -->
             <plugin>
                 <groupId>com.spotify</groupId>
-                <artifactId>docker-maven-plugin</artifactId>
-                <version>1.1.0</version>
-                <executions>
-                    <execution>
-                        <id>build-image</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>build</goal>
-                        </goals>
-                    </execution>
-                </executions>
+                <artifactId>dockerfile-maven-plugin</artifactId>
+                <version>1.4.9</version>
                 <configuration>
-                    <imageName>java-demo/${project.artifactId}:${project.version}</imageName>
-                    <dockerHost>https://hub.docker.com</dockerHost>
-                    <!--<dockerHost>http://39.98.190.128:2375</dockerHost>-->
-                    <baseImage>java:8</baseImage>
-                    <entryPoint>["java", "-jar", "-Dspring.profiles.active=prd","/${project.build.finalName}.jar"]
-                    </entryPoint>
-                    <resources>
-                        <resource>
-                            <targetPath>/</targetPath>
-                            <directory>${project.build.directory}</directory>
-                            <include>${project.build.finalName}.jar</include>
-                        </resource>
-                    </resources>
+                    <repository>${docker.image.prefix}/${project.artifactId}</repository>
                 </configuration>
             </plugin>
+            <!-- end::plugin[] -->
+
+            <!-- tag::unpack[] -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>unpack</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>unpack</goal>
+                        </goals>
+                        <configuration>
+                            <artifactItems>
+                                <artifactItem>
+                                    <groupId>${project.groupId}</groupId>
+                                    <artifactId>${project.artifactId}</artifactId>
+                                    <version>${project.version}</version>
+                                </artifactItem>
+                            </artifactItems>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <!-- end::unpack[] -->
         </plugins>
     </build>
 

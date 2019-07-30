@@ -4,8 +4,16 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.Serializable;
 
 public class Role implements Serializable {
+    /**
+     * role id
+     */
+    @ApiModelProperty(value = "role id")
     private Integer id;
 
+    /**
+     * role name
+     */
+    @ApiModelProperty(value = "role name")
     private String role;
 
     private static final long serialVersionUID = 1L;
