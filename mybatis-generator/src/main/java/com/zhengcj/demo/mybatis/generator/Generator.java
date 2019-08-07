@@ -16,7 +16,7 @@ import java.util.List;
 public class Generator {
     public static void main(String[] args) {
         // 执行中的异常信息会保存在warnings中
-        List<String> warnings = new ArrayList<String>();
+        List<String> warnings = new ArrayList<>();
         try {
             // true:生成的文件覆盖之前的
             final boolean overwrite = true;
@@ -29,15 +29,7 @@ public class Generator {
             DefaultShellCallback callback = new DefaultShellCallback(overwrite);
             MyBatisGenerator myBatisGenerator = new MyBatisGenerator(config, callback, warnings);
             myBatisGenerator.generate(null);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        } catch (InvalidConfigurationException e) {
-            e.printStackTrace();
-        } catch (XMLParserException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
